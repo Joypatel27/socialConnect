@@ -20,7 +20,7 @@ import HomePage from './pages/HomePage.js';
 import Password from './Password.js';
 import Forgot from './Forget.js';
 import ResetPasswordPage from './pages/resetpass.js';
-// GIT DEVELOP . 
+// GIT DEVELOP TEST . 
 //GIT TEST
 
 function App() {
