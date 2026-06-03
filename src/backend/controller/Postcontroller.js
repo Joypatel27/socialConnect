@@ -4,7 +4,8 @@ const fs = require('fs');
 const path = require('path');
 exports.createPost = async (req, res) => {
   try {
-    const userId = req.session.userId;
+    // const userId = req.session.userId;
+      const userId = req.session.userId || req.body.user;
     const caption = req.body.caption;
     const imageUrl = req.file.path.replace(/\\/g, '/');
 

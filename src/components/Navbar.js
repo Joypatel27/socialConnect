@@ -9,7 +9,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function Navbarr() {
   const navigate = useNavigate();
-  const [user, setUser] = useState(null); // 🟡 Track login status
+  const [user, setUser] = useState(null); //  Track login status
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -20,7 +20,7 @@ function Navbarr() {
     try {
       await axios.post("http://localhost:5000/User/logout", {}, { withCredentials: true });
       localStorage.removeItem("user");
-      setUser(null); // 🔴 Update UI after logout
+      setUser(null); // Update UI after logout
       navigate('/');
     } catch (err) {
       console.error("Logout failed:", err);
@@ -30,7 +30,7 @@ function Navbarr() {
   return (
     <Navbar bg="light" expand="lg" className="shadow-sm">
       <Container>
-        <Navbar.Brand href="/" className="fw-bold">MySocialApp</Navbar.Brand>
+        <Navbar.Brand href="/" className="fw-bold">SocialConnect</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         
         <Navbar.Collapse id="basic-navbar-nav">
